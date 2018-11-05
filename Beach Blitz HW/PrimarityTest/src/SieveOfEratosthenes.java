@@ -1,10 +1,18 @@
+import java.util.Scanner;
 
 public class SieveOfEratosthenes {
 	public static void main(String[] args) {
-		int max = 513;
 		
-		findPrimes(max);
+		Scanner s = new Scanner(System.in);
+			int input = s.nextInt();
+		
+		//int max = 513;
+		
+		findPrimes(input);
+		
+		s.close();
 	}
+	
 	
 	static void findPrimes (int max) {
 		if(max%2==0 && max!=2)
