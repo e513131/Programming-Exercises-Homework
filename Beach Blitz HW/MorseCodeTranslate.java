@@ -1,9 +1,9 @@
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MorseCodeTranslate {
 	public static void main (String args[]) {
-		Dictionary<String, String> dict = new Hashtable<String, String>();
+		Map<String, String> dict = new HashMap<String, String>();
 
 		String[] englishAlph = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","/"," "};
 		String[] morseAlph = {".-", "-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-..-","--.."," ", "/"};
@@ -19,7 +19,7 @@ public class MorseCodeTranslate {
 		//System.out.println(dict.get("a"));
 	}
 	
-	static void toEnglish(String morseStuff, Dictionary<String, String> dict) {
+	static void toEnglish(String morseStuff, Map<String, String> dict) {
 		String[] splitted=morseStuff.split(" ");
 		
 		for(int i=0; i<splitted.length; i++) {
@@ -28,7 +28,7 @@ public class MorseCodeTranslate {
 		System.out.println();
 	}
 	
-	static void toMorse(String englishStuff, Dictionary<String, String> dict) {
+	static void toMorse(String englishStuff, Map<String, String> dict) {
 		
 		for(int i=0; i<englishStuff.length(); i++) {
 			System.out.print(dict.get(Character.toString(englishStuff.charAt(i)))+" ");
